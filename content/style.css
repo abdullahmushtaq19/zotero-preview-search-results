@@ -1,0 +1,317 @@
+#passage-search-box {
+	align-items: center;
+	width: 268px;
+	height: 28px;
+	margin-inline-end: 8px;
+	font-size: var(--zotero-font-size);
+}
+
+#passage-search-input {
+	flex: 1 1 auto;
+	width: 268px;
+	max-width: 268px;
+	height: 28px;
+	margin: 0;
+	padding: 0;
+	padding-inline-end: 28px;
+}
+
+#passage-search-input::part(search-icon),
+#passage-search-input::part(search-sign) {
+	cursor: pointer;
+}
+
+#passage-search-funnel {
+	position: relative;
+	width: 28px;
+	height: 28px;
+	min-width: 28px;
+	margin: 0;
+	margin-inline-start: -28px;
+	padding: 0;
+	z-index: 2;
+	appearance: none;
+	cursor: pointer;
+	background-color: transparent;
+	background-image: url("chrome://zotero/skin/16/universal/filter.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px 16px;
+	list-style-image: url("chrome://zotero/skin/16/universal/filter.svg");
+	-moz-context-properties: fill, fill-opacity;
+	fill: currentColor;
+	color: var(--fill-secondary);
+}
+
+#passage-search-funnel:hover,
+#passage-search-funnel:active {
+	background-color: transparent;
+}
+
+#passage-search-funnel .toolbarbutton-icon,
+#passage-search-funnel-mark {
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 0;
+	pointer-events: none;
+}
+
+#passage-search-funnel:hover .toolbarbutton-icon,
+#passage-search-funnel[aria-pressed="true"] .toolbarbutton-icon {
+	background-color: var(--fill-quinary);
+}
+
+#passage-search-options,
+#passage-search-results {
+	box-sizing: border-box;
+	color: inherit;
+	font: inherit;
+}
+
+#passage-search-options[hidden],
+#passage-search-results[hidden] {
+	display: none !important;
+}
+
+#passage-search-options {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	gap: 8px;
+	height: 40px;
+	padding: 0 8px;
+	border-bottom: var(--material-border);
+	background: var(--material-background);
+	font-size: var(--zotero-font-size);
+}
+
+#passage-search-options label {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	height: 28px;
+}
+
+#passage-search-mode {
+	appearance: none;
+	height: 28px;
+	margin: 0;
+	padding: 0 26px 0 8px;
+	border-radius: 5px;
+	border: var(--material-border-quinary);
+	background-color: var(--material-background);
+	background-image: url("chrome://zotero/skin/8/universal/chevron-6.svg");
+	background-repeat: no-repeat;
+	background-position: right 8px center;
+	background-size: 8px 8px;
+	-moz-context-properties: fill, fill-opacity;
+	fill: currentColor;
+	color: var(--fill-primary);
+	color-scheme: light dark;
+	font: inherit;
+	line-height: 26px;
+}
+
+#passage-search-options button {
+	appearance: none;
+	height: 28px;
+	margin: 0;
+	padding: 0 10px;
+	border-radius: 5px;
+	border: var(--material-border-quinary);
+	background: var(--material-background);
+	color: var(--fill-primary);
+	font: inherit;
+}
+
+#passage-search-options button:hover {
+	background: var(--fill-quinary);
+}
+
+.passage-search-active #zotero-items-tree,
+.passage-search-active item-tree {
+	display: none !important;
+}
+
+#zotero-items-pane.passage-search-active {
+	position: relative;
+	overflow: hidden;
+}
+
+#passage-search-results {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block !important;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	overflow-y: auto;
+	min-width: 0;
+	max-width: 100%;
+	padding: 4px 8px 8px;
+	color: var(--fill-primary);
+	background: var(--material-background);
+	font-family: system-ui, -apple-system, sans-serif;
+	font-size: 13px;
+	line-height: 1.3333333333;
+}
+
+.passage-search-book,
+.passage-search-summary,
+.passage-search-book-head,
+.passage-search-passage,
+.passage-search-more {
+	display: block;
+	box-sizing: border-box;
+	max-width: 100%;
+	min-width: 0;
+}
+
+.passage-search-summary {
+	padding: 6px 8px 2px;
+	color: var(--fill-secondary);
+	white-space: normal;
+}
+
+.passage-search-book-head {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+	min-height: 26px;
+	margin: 1px 0 0;
+	padding: 1px 4px 1px 0;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: 400;
+}
+
+.passage-search-book-head:hover {
+	background-color: var(--material-mix-quinary);
+}
+
+.passage-search-book-head .twisty {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	width: 16px;
+	height: 16px;
+	margin-inline-end: 0;
+	padding: 4px;
+	box-sizing: border-box;
+	background: url("chrome://zotero/skin/8/universal/chevron-8.svg") content-box no-repeat;
+	-moz-context-properties: fill, fill-opacity;
+	fill: var(--fill-secondary);
+	transition: transform 0.125s ease;
+	transform: rotate(-90deg);
+}
+
+.passage-search-book-head .twisty.open {
+	transform: rotate(0deg);
+}
+
+.passage-search-book-head .icon-item-type {
+	flex: 0 0 auto;
+	width: 16px;
+	height: 16px;
+}
+
+.passage-search-book.collapsed .passage-search-children {
+	display: none;
+}
+
+.passage-search-title {
+	font-weight: 400;
+	flex: 1 1 auto;
+	min-width: 0;
+	margin-left: 4px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: var(--fill-primary);
+}
+
+.passage-search-meta,
+.passage-search-count {
+	flex: 0 1 auto;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: var(--fill-secondary);
+	font-weight: 400;
+}
+
+.passage-search-count {
+	flex: 0 0 auto;
+	font-variant-numeric: tabular-nums;
+}
+
+.passage-search-passage {
+	margin: 1px 0;
+	padding: 2px 8px 2px 36px;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 0.923076923em;
+	max-width: 100%;
+}
+
+.passage-search-passage.even {
+	background-color: var(--material-background);
+}
+
+.passage-search-passage.odd {
+	background-color: var(--material-stripe);
+}
+
+.passage-search-passage:hover {
+	background-color: var(--material-mix-quinary);
+}
+
+.passage-search-body {
+	display: block;
+	min-width: 0;
+	max-width: 100%;
+	white-space: normal;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+	line-height: 1.35;
+	max-height: 5.4em;
+	overflow: hidden;
+	font-style: italic;
+	color: var(--fill-primary);
+}
+
+.passage-search-page {
+	float: right;
+	margin-left: 10px;
+	font-style: normal;
+	font-size: 0.92em;
+	color: var(--fill-secondary);
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+.passage-search-printed {
+	display: inline-block;
+	margin-right: 6px;
+	padding: 0 6px;
+	border-radius: 4px;
+	background: var(--fill-quarternary, rgba(127, 127, 127, 0.25));
+	color: var(--fill-primary);
+}
+
+.passage-search-hit {
+	font-style: normal;
+	font-weight: 600;
+	background: color-mix(in srgb, var(--color-accent) 32%, transparent);
+	color: inherit;
+	padding: 0 1px;
+	border-radius: 2px;
+}
+
+.passage-search-more {
+	margin: 2px 0 8px 36px;
+}

@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Preview Search Results",
+  "version": "0.1.24",
+  "description": "Search the selected collection; each match appears as a text preview under the book.",
+  "applications": {
+    "zotero": {
+      "id": "passage-search@local",
+      "update_url": "https://raw.githubusercontent.com/abdullahmushtaq19/zotero-preview-search-results-/main/updates.json",
+      "strict_min_version": "8.0",
+      "strict_max_version": "10.0.*"
+    }
+  }
+}
