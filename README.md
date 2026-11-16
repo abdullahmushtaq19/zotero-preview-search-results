@@ -15,7 +15,7 @@ Zotero 8–10 add-on. It searches all the PDFs in the selected collection and li
 
 ## Install
 
-Download `preview-search-results.xpi` from the [v0.1.24 release](https://github.com/abdullahmushtaq19/zotero-preview-search-results-/releases/tag/v0.1.24). In Zotero: **Tools → Add-ons → gear → Install Add-on From File…**, pick that file, restart if asked.
+Download `preview-search-results.xpi` from the [v0.1.24 release](https://github.com/abdullahmushtaq19/zotero-preview-search-results/releases/tag/v0.1.24). In Zotero: **Tools → Add-ons → gear → Install Add-on From File…**, pick that file, restart if asked.
 
 Zotero checks for a newer release on its own after that. Restart when it asks.
 

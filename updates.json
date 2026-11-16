@@ -4,7 +4,7 @@
       "updates": [
         {
           "version": "0.1.24",
-          "update_link": "https://github.com/abdullahmushtaq19/zotero-preview-search-results-/releases/download/v0.1.24/preview-search-results.xpi",
+          "update_link": "https://github.com/abdullahmushtaq19/zotero-preview-search-results/releases/download/v0.1.24/preview-search-results.xpi",
           "applications": {
             "zotero": {
               "strict_min_version": "8.0",
